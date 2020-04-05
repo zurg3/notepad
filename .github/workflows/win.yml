@@ -3,6 +3,7 @@ env:
   APP_NAME: "notepad"
   APP_PLATFORM: "win32"
   APP_ARCH: "x64"
+  QT_VERSION: "5.14.1"
 
 on:
   push:
@@ -20,12 +21,12 @@ jobs:
       - name: Setup Qt5
         uses: jurplel/install-qt-action@v2
         with:
-          version: '5.14.1'
-          host: 'windows'
-          target: 'desktop'
-          install-deps: 'true'
-          mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
-          cached: 'false'
+          version: ${{ env.QT_VERSION }}
+          host: "windows"
+          target: "desktop"
+          install-deps: "true"
+          mirror: "http://mirrors.ocf.berkeley.edu/qt/"
+          cached: "false"
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
