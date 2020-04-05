@@ -1,0 +1,35 @@
+name: Linux
+env:
+  APP_NAME: "notepad"
+  APP_PLATFORM: "linux"
+  APP_ARCH: "x86_64"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  linux:
+    name: Linux (ubuntu-latest)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Clone
+        uses: actions/checkout@v2
+
+      - name: Setup Qt5
+        uses: jurplel/install-qt-action@v2
+        with:
+          version: '5.14.1'
+          host: 'linux'
+          target: 'desktop'
+          install-deps: 'true'
+          mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
+          cached: 'false'
+
+      - name: Build
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
