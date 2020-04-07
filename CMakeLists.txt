@@ -42,3 +42,8 @@ target_link_libraries(notepad
   Qt5::Widgets
   Qt5::PrintSupport
 )
+
+install(TARGETS notepad DESTINATION /usr/bin)
+if (UNIX)
+  install(FILES notepad.desktop DESTINATION /usr/share/applications)
+endif (UNIX)
