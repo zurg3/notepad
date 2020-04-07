@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Notepad
+Comment=Simple text editor. Based on official Qt5 Notepad example.
+Exec=notepad %F
+Icon=accessories-text-editor
+Categories=Utility;TextEditor;Qt;
+MimeType=text/plain;
+Terminal=false
