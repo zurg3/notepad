@@ -34,3 +34,8 @@ jobs:
           cd build
           cmake ..
           cmake --build .
+
+      - name: Install
+        run: |
+          cd build
+          sudo make install
