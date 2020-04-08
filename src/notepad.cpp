@@ -55,6 +55,22 @@ Notepad::Notepad(QWidget *parent):
 
     ui->textEdit->setAcceptRichText(false);
 
+    if (QApplication::arguments().size() > 1) {
+      QString fileName = QApplication::arguments().at(1);
+      QFile file(fileName);
+      currentFile = fileName;
+      if (!file.open(QIODevice::ReadOnly | QFile::Text)) {
+        QMessageBox::warning(this, "Warning", "Cannot open file: " + file.errorString());
+        return;
+      }
+      setWindowTitle(fileName);
+      //QTextStream in(&file);
+      //QString text = in.readAll();
+      QString text = QString::fromUtf8(file.readAll());
+      ui->textEdit->setText(text);
+      file.close();
+    }
+
     #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
       ui->textEdit->setTabStopDistance(tab_size * 10);
     #else
