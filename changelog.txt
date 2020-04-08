@@ -1,2 +1,7 @@
+v0.4 (08.04.2020)
+- Added feature to open file from command line argument
+- Added Desktop Entry for Linux
+- Added PKGBUILD for Arch Linux
+
 v0.3 (05.04.2020)
 - Release on GitHub
