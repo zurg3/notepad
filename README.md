@@ -5,10 +5,29 @@ Simple text editor. Based on [official Qt5 Notepad example](https://code.qt.io/c
 [![Build Status](https://github.com/zurg3/notepad/workflows/Windows/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
 [![Build Status](https://github.com/zurg3/notepad/workflows/Linux/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
 
+## Install Notepad
+### Windows - [download portable build](https://github.com/zurg3/notepad/releases/latest)
+
+### Linux
+#### Arch Linux
+Install via PKGBUILD
+```
+$ git clone https://github.com/zurg3/notepad.git
+$ cd notepad
+$ makepkg -si
+$ cd ..
+$ rm -rf notepad
+```
+
+#### Other Linux distros
+- Get the source code
+- Build the project
+- Install via `sudo make install`
+
 ## Some notes
-- **Currently I don't provide Notepad binaries! If you want to try Notepad, you can get the source code and build it.**
+- **Currently I don't provide Notepad binaries for Linux!**
 - You need install the latest [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003) to run Notepad on Windows.
-- Probably `qmake` project will be deprecated. I think better use CMake instead it.
+- Probably `qmake` project will be deprecated. I think better use CMake instead of it.
 - [Issues](https://github.com/zurg3/notepad/issues) and [Pull Requests](https://github.com/zurg3/notepad/pulls) are welcome.
 
 ## Screenshots
