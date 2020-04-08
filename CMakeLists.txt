@@ -36,14 +36,15 @@ if (WIN32)
   )
 endif (WIN32)
 
-target_link_libraries(notepad
+target_link_libraries(notepad PUBLIC
   Qt5::Core
   Qt5::Gui
   Qt5::Widgets
   Qt5::PrintSupport
 )
 
-install(TARGETS notepad DESTINATION /usr/bin)
+install(TARGETS notepad RUNTIME DESTINATION /usr/bin)
+
 if (UNIX)
   install(FILES notepad.desktop DESTINATION /usr/share/applications)
 endif (UNIX)
