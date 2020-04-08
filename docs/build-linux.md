@@ -26,3 +26,8 @@ $ cmake --build .
 ```
 
 ## If build was successful, Notepad executable will be in the current directory
+
+## Install the project
+```
+$ sudo make install
+```
