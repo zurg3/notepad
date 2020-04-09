@@ -36,7 +36,7 @@ if (WIN32)
   )
 endif (WIN32)
 
-target_link_libraries(notepad PUBLIC
+target_link_libraries(notepad PUBLIC -static
   Qt5::Core
   Qt5::Gui
   Qt5::Widgets
