@@ -63,7 +63,7 @@ Notepad::Notepad(QWidget *parent):
         QMessageBox::warning(this, "Warning", "Cannot open file: " + file.errorString());
         return;
       }
-      setWindowTitle(fileName);
+      setWindowTitle(fileName + QString(" — Notepad"));
       //QTextStream in(&file);
       //QString text = in.readAll();
       QString text = QString::fromUtf8(file.readAll());
@@ -107,7 +107,7 @@ void Notepad::open() {
     QMessageBox::warning(this, "Warning", "Cannot open file: " + file.errorString());
     return;
   }
-  setWindowTitle(fileName);
+  setWindowTitle(fileName + QString(" — Notepad"));
   //QTextStream in(&file);
   //QString text = in.readAll();
   QString text = QString::fromUtf8(file.readAll());
@@ -129,7 +129,7 @@ void Notepad::save() {
     QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
     return;
   }
-  setWindowTitle(fileName);
+  setWindowTitle(fileName + QString(" — Notepad"));
   //QTextStream out(&file);
   //QString text = ui->textEdit->toPlainText();
   file.write(ui->textEdit->toPlainText().toUtf8());
@@ -147,7 +147,7 @@ void Notepad::saveAs() {
   }
 
   currentFile = fileName;
-  setWindowTitle(fileName);
+  setWindowTitle(fileName + QString(" — Notepad"));
   //QTextStream out(&file);
   //QString text = ui->textEdit->toPlainText();
   file.write(ui->textEdit->toPlainText().toUtf8());
