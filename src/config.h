@@ -1,6 +1,6 @@
 #include <QtGlobal>
 
-#if WIN32
+#if defined(WIN32) || defined(_WIN32)
   constexpr auto font_family = "Lucida Console";
 #else
   constexpr auto font_family = "DejaVu Sans Mono Book";
