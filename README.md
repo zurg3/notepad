@@ -27,7 +27,6 @@ $ rm -rf notepad
 ## Some notes
 - **Currently I don't provide Notepad binaries for Linux!**
 - You need install the latest [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003) to run Notepad on Windows.
-- Probably `qmake` project will be deprecated. I think better use CMake instead of it.
 - [Issues](https://github.com/zurg3/notepad/issues) and [Pull Requests](https://github.com/zurg3/notepad/pulls) are welcome.
 
 ## Screenshots
