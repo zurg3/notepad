@@ -34,6 +34,7 @@ class Notepad: public QMainWindow {
   private:
     Ui::Notepad *ui;
     QString currentFile;
+    void createStatusBar();
 };
 
 #endif

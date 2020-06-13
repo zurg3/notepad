@@ -16,6 +16,7 @@
 #include <QtGlobal>
 #include <QFontMetrics>
 #include <QDir>
+#include <QStatusBar>
 
 #include "notepad.h"
 #include "ui_notepad.h"
@@ -28,6 +29,8 @@ Notepad::Notepad(QWidget *parent):
   ui(new Ui::Notepad) {
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit);
+
+    createStatusBar();
 
     connect(ui->actionNew, &QAction::triggered, this, &Notepad::newDocument);
     connect(ui->actionOpen, &QAction::triggered, this, &Notepad::open);
@@ -92,6 +95,10 @@ Notepad::Notepad(QWidget *parent):
 
 Notepad::~Notepad() {
   delete ui;
+}
+
+void Notepad::createStatusBar() {
+  statusBar()->showMessage("Notepad");
 }
 
 void Notepad::newDocument() {
