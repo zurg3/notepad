@@ -30,6 +30,7 @@ class Notepad: public QMainWindow {
     void zoomOut();
     void zoomIn();
     void about();
+    void documentWasModified();
 
   private:
     Ui::Notepad *ui;

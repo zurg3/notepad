@@ -17,6 +17,7 @@
 #include <QFontMetrics>
 #include <QDir>
 #include <QStatusBar>
+#include <QTextDocument>
 
 #include "notepad.h"
 #include "ui_notepad.h"
@@ -29,6 +30,8 @@ Notepad::Notepad(QWidget *parent):
   ui(new Ui::Notepad) {
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit);
+
+    setWindowTitle("[*]Notepad");
 
     createStatusBar();
 
@@ -46,6 +49,7 @@ Notepad::Notepad(QWidget *parent):
     connect(ui->actionZoomOut, &QAction::triggered, this, &Notepad::zoomOut);
     connect(ui->actionZoomIn, &QAction::triggered, this, &Notepad::zoomIn);
     connect(ui->actionAbout, &QAction::triggered, this, &Notepad::about);
+    connect(ui->textEdit->document(), &QTextDocument::contentsChanged, this, &Notepad::documentWasModified);
 
     QFont font;
 
@@ -67,11 +71,13 @@ Notepad::Notepad(QWidget *parent):
         QMessageBox::warning(this, "Warning", "Cannot open file: " + file.errorString());
         return;
       }
-      setWindowTitle(fileName + QString(" — Notepad"));
       //QTextStream in(&file);
       //QString text = in.readAll();
       QString text = QString::fromUtf8(file.readAll());
       ui->textEdit->setText(text);
+      ui->textEdit->document()->setModified(false);
+      setWindowModified(false);
+      setWindowTitle(QString("[*]") + fileName + QString(" — Notepad"));
       file.close();
       statusBar()->showMessage("File opened", status_bar_message_timeout);
     }
@@ -116,11 +122,13 @@ void Notepad::open() {
     QMessageBox::warning(this, "Warning", "Cannot open file: " + file.errorString());
     return;
   }
-  setWindowTitle(fileName + QString(" — Notepad"));
   //QTextStream in(&file);
   //QString text = in.readAll();
   QString text = QString::fromUtf8(file.readAll());
   ui->textEdit->setText(text);
+  ui->textEdit->document()->setModified(false);
+  setWindowModified(false);
+  setWindowTitle(QString("[*]") + fileName + QString(" — Notepad"));
   file.close();
   statusBar()->showMessage("File opened", status_bar_message_timeout);
 }
@@ -139,11 +147,13 @@ void Notepad::save() {
     QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
     return;
   }
-  setWindowTitle(fileName + QString(" — Notepad"));
   //QTextStream out(&file);
   //QString text = ui->textEdit->toPlainText();
   file.write(ui->textEdit->toPlainText().toUtf8());
   //out << text;
+  ui->textEdit->document()->setModified(false);
+  setWindowModified(false);
+  setWindowTitle(QString("[*]") + fileName + QString(" — Notepad"));
   file.close();
   statusBar()->showMessage("File saved", status_bar_message_timeout);
 }
@@ -158,11 +168,13 @@ void Notepad::saveAs() {
   }
 
   currentFile = fileName;
-  setWindowTitle(fileName + QString(" — Notepad"));
   //QTextStream out(&file);
   //QString text = ui->textEdit->toPlainText();
   file.write(ui->textEdit->toPlainText().toUtf8());
   //out << text;
+  ui->textEdit->document()->setModified(false);
+  setWindowModified(false);
+  setWindowTitle(QString("[*]") + fileName + QString(" — Notepad"));
   file.close();
   statusBar()->showMessage("File saved", status_bar_message_timeout);
 }
@@ -230,4 +242,8 @@ void Notepad::about() {
                         + QT_VERSION_STR;
 
   QMessageBox::about(this, "About", about_message);
+}
+
+void Notepad::documentWasModified() {
+  setWindowModified(ui->textEdit->document()->isModified());
 }
