@@ -31,7 +31,7 @@ Notepad::Notepad(QWidget *parent):
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit);
 
-    setWindowTitle("[*]Notepad");
+    setWindowTitle(QString("[*]") + default_file_name + QString(" — Notepad"));
 
     createStatusBar();
 
