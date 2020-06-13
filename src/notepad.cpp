@@ -73,7 +73,7 @@ Notepad::Notepad(QWidget *parent):
       QString text = QString::fromUtf8(file.readAll());
       ui->textEdit->setText(text);
       file.close();
-      statusBar()->showMessage("File opened", 10000);
+      statusBar()->showMessage("File opened", status_bar_message_timeout);
     }
 
     #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -122,7 +122,7 @@ void Notepad::open() {
   QString text = QString::fromUtf8(file.readAll());
   ui->textEdit->setText(text);
   file.close();
-  statusBar()->showMessage("File opened", 10000);
+  statusBar()->showMessage("File opened", status_bar_message_timeout);
 }
 
 void Notepad::save() {
@@ -145,7 +145,7 @@ void Notepad::save() {
   file.write(ui->textEdit->toPlainText().toUtf8());
   //out << text;
   file.close();
-  statusBar()->showMessage("File saved", 10000);
+  statusBar()->showMessage("File saved", status_bar_message_timeout);
 }
 
 void Notepad::saveAs() {
@@ -164,7 +164,7 @@ void Notepad::saveAs() {
   file.write(ui->textEdit->toPlainText().toUtf8());
   //out << text;
   file.close();
-  statusBar()->showMessage("File saved", 10000);
+  statusBar()->showMessage("File saved", status_bar_message_timeout);
 }
 
 void Notepad::print() {
