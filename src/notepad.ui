@@ -104,6 +104,9 @@
       <property name="toolTip">
         <string>New text file</string>
       </property>
+      <property name="statusTip">
+        <string>Create a new text file</string>
+      </property>
       <property name="shortcut">
         <string>Ctrl+N</string>
       </property>
@@ -119,6 +122,9 @@
       </property>
       <property name="toolTip">
         <string>Open file</string>
+      </property>
+      <property name="statusTip">
+        <string>Open an existing text file</string>
       </property>
       <property name="shortcut">
         <string>Ctrl+O</string>
@@ -136,6 +142,9 @@
       <property name="toolTip">
         <string>Save file</string>
       </property>
+      <property name="statusTip">
+        <string>Save the text file to disk</string>
+      </property>
       <property name="shortcut">
         <string>Ctrl+S</string>
       </property>
@@ -151,6 +160,9 @@
       </property>
       <property name="toolTip">
         <string>Save file as</string>
+      </property>
+      <property name="statusTip">
+        <string>Save the text file under a new name</string>
       </property>
       <property name="shortcut">
         <string>Alt+S</string>
@@ -183,6 +195,9 @@
       </property>
       <property name="toolTip">
         <string>Exit Notepad</string>
+      </property>
+      <property name="statusTip">
+        <string>Exit the application</string>
       </property>
       <property name="shortcut">
         <string>Ctrl+Q</string>

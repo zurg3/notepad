@@ -58,6 +58,7 @@ Notepad::Notepad(QWidget *parent):
 
     ui->textEdit->setAcceptRichText(false);
 
+    // Open file from command line argument
     if (QApplication::arguments().size() > 1) {
       QString fileName = QApplication::arguments().at(1);
       QFile file(fileName);
@@ -72,6 +73,7 @@ Notepad::Notepad(QWidget *parent):
       QString text = QString::fromUtf8(file.readAll());
       ui->textEdit->setText(text);
       file.close();
+      statusBar()->showMessage("File opened", 10000);
     }
 
     #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
@@ -120,6 +122,7 @@ void Notepad::open() {
   QString text = QString::fromUtf8(file.readAll());
   ui->textEdit->setText(text);
   file.close();
+  statusBar()->showMessage("File opened", 10000);
 }
 
 void Notepad::save() {
@@ -142,6 +145,7 @@ void Notepad::save() {
   file.write(ui->textEdit->toPlainText().toUtf8());
   //out << text;
   file.close();
+  statusBar()->showMessage("File saved", 10000);
 }
 
 void Notepad::saveAs() {
@@ -160,6 +164,7 @@ void Notepad::saveAs() {
   file.write(ui->textEdit->toPlainText().toUtf8());
   //out << text;
   file.close();
+  statusBar()->showMessage("File saved", 10000);
 }
 
 void Notepad::print() {
