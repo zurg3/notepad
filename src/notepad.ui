@@ -186,6 +186,9 @@
       <property name="toolTip">
         <string>Print file</string>
       </property>
+      <property name="statusTip">
+        <string>Print the text file</string>
+      </property>
       <property name="shortcut">
         <string>Ctrl+P</string>
       </property>
@@ -218,6 +221,9 @@
       <property name="text">
         <string>Copy</string>
       </property>
+      <property name="statusTip">
+        <string>Copy selected text to clipboard</string>
+      </property>
       <property name="shortcut">
         <string>Ctrl+C</string>
       </property>
@@ -230,6 +236,9 @@
       </property>
       <property name="text">
         <string>Cut</string>
+      </property>
+      <property name="statusTip">
+        <string>Cut selected text to clipboard</string>
       </property>
       <property name="shortcut">
         <string>Ctrl+X</string>
@@ -244,6 +253,9 @@
       <property name="text">
         <string>Paste</string>
       </property>
+      <property name="statusTip">
+        <string>Paste text from clipboard to cursor position</string>
+      </property>
       <property name="shortcut">
         <string>Ctrl+V</string>
       </property>
@@ -256,6 +268,9 @@
       </property>
       <property name="text">
         <string>Undo</string>
+      </property>
+      <property name="statusTip">
+        <string>Undo changes</string>
       </property>
       <property name="shortcut">
         <string>Ctrl+Z</string>
@@ -270,6 +285,9 @@
       <property name="text">
         <string>Redo</string>
       </property>
+      <property name="statusTip">
+        <string>Redo changes</string>
+      </property>
       <property name="shortcut">
         <string>Ctrl+Y</string>
       </property>
@@ -283,6 +301,9 @@
       <property name="text">
         <string>Zoom Out</string>
       </property>
+      <property name="statusTip">
+        <string>Zoom out text</string>
+      </property>
       <property name="shortcut">
         <string>Ctrl+-</string>
       </property>
@@ -295,6 +316,9 @@
       </property>
       <property name="text">
         <string>Zoom In</string>
+      </property>
+      <property name="statusTip">
+        <string>Zoom in text</string>
       </property>
       <property name="shortcut">
         <string>Ctrl+=</string>
@@ -343,6 +367,9 @@
       </property>
       <property name="text">
         <string>About</string>
+      </property>
+      <property name="statusTip">
+        <string>Show info about Notepad</string>
       </property>
       <property name="toolTip">
         <string>About Notepad</string>
