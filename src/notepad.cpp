@@ -18,6 +18,8 @@
 #include <QDir>
 #include <QStatusBar>
 #include <QTextDocument>
+#include <QDateTime>
+#include <QTextCursor>
 
 #include "notepad.h"
 #include "ui_notepad.h"
@@ -48,6 +50,7 @@ Notepad::Notepad(QWidget *parent):
     connect(ui->actionRedo, &QAction::triggered, this, &Notepad::redo);
     connect(ui->actionZoomOut, &QAction::triggered, this, &Notepad::zoomOut);
     connect(ui->actionZoomIn, &QAction::triggered, this, &Notepad::zoomIn);
+    connect(ui->actionInsertTimeDate, &QAction::triggered, this, &Notepad::insertTimeDate);
     connect(ui->actionAbout, &QAction::triggered, this, &Notepad::about);
     connect(ui->textEdit->document(), &QTextDocument::contentsChanged, this, &Notepad::documentWasModified);
 
@@ -228,6 +231,16 @@ void Notepad::zoomOut() {
 
 void Notepad::zoomIn() {
   ui->textEdit->zoomIn(zoom_range);
+}
+
+void Notepad::insertTimeDate() {
+  QDateTime current_time_date = QDateTime::currentDateTime();
+  QString current_time_date_string = current_time_date.toString("hh:mm:ss dd.MM.yyyy");
+  ui->textEdit->setText(QString(ui->textEdit->toPlainText().toUtf8()) + current_time_date_string);
+
+  QTextCursor text_cursor = ui->textEdit->textCursor();
+  text_cursor.movePosition(QTextCursor::End);
+  ui->textEdit->setTextCursor(text_cursor);
 }
 
 void Notepad::about() {

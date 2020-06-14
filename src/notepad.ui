@@ -54,6 +54,8 @@
         <addaction name="separator"/>
         <addaction name="actionZoomOut"/>
         <addaction name="actionZoomIn"/>
+        <addaction name="separator"/>
+        <addaction name="actionInsertTimeDate"/>
       </widget>
       <widget class="QMenu" name="menuHelp">
         <property name="title">
@@ -86,6 +88,8 @@
       <addaction name="separator"/>
       <addaction name="actionZoomOut"/>
       <addaction name="actionZoomIn"/>
+      <addaction name="separator"/>
+      <addaction name="actionInsertTimeDate"/>
       <addaction name="separator"/>
       <addaction name="actionAbout"/>
       <addaction name="separator"/>
@@ -292,6 +296,25 @@
       </property>
       <property name="shortcut">
         <string>Ctrl+=</string>
+      </property>
+    </action>
+    <action name="actionInsertTimeDate">
+      <property name="icon">
+        <iconset resource="notepad.qrc">
+          <normaloff>:/images/date_time.png</normaloff>:/images/date_time.png
+        </iconset>
+      </property>
+      <property name="text">
+        <string>Time/Date</string>
+      </property>
+      <property name="toolTip">
+        <string>Insert current time and date</string>
+      </property>
+      <property name="statusTip">
+        <string>Insert current time and date</string>
+      </property>
+      <property name="shortcut">
+        <string>F5</string>
       </property>
     </action>
     <action name="actionAbout">

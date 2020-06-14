@@ -29,6 +29,7 @@ class Notepad: public QMainWindow {
     void redo();
     void zoomOut();
     void zoomIn();
+    void insertTimeDate();
     void about();
     void documentWasModified();
 
