@@ -30,6 +30,7 @@ class Notepad: public QMainWindow {
     void zoomOut();
     void zoomIn();
     void insertTimeDate();
+    void openGitHub();
     void about();
     void documentWasModified();
 

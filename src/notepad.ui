@@ -61,6 +61,8 @@
         <property name="title">
           <string>Help</string>
         </property>
+        <addaction name="actionOpenGitHub"/>
+        <addaction name="separator"/>
         <addaction name="actionAbout"/>
       </widget>
       <addaction name="menuFile"/>
@@ -311,10 +313,26 @@
         <string>Insert current time and date</string>
       </property>
       <property name="statusTip">
-        <string>Insert current time and date</string>
+        <string>Insert current time and date in text</string>
       </property>
       <property name="shortcut">
         <string>F5</string>
+      </property>
+    </action>
+    <action name="actionOpenGitHub">
+      <property name="icon">
+        <iconset resource="notepad.qrc">
+          <normaloff>:/images/github.png</normaloff>:/images/github.png
+        </iconset>
+      </property>
+      <property name="text">
+        <string>Source code on GitHub</string>
+      </property>
+      <property name="toolTip">
+        <string>Open Notepad GitHub repository</string>
+      </property>
+      <property name="statusTip">
+        <string>Open Notepad GitHub repository</string>
       </property>
     </action>
     <action name="actionAbout">

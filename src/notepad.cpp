@@ -20,6 +20,7 @@
 #include <QTextDocument>
 #include <QDateTime>
 #include <QTextCursor>
+#include <QDesktopServices>
 
 #include "notepad.h"
 #include "ui_notepad.h"
@@ -51,6 +52,7 @@ Notepad::Notepad(QWidget *parent):
     connect(ui->actionZoomOut, &QAction::triggered, this, &Notepad::zoomOut);
     connect(ui->actionZoomIn, &QAction::triggered, this, &Notepad::zoomIn);
     connect(ui->actionInsertTimeDate, &QAction::triggered, this, &Notepad::insertTimeDate);
+    connect(ui->actionOpenGitHub, &QAction::triggered, this, &Notepad::openGitHub);
     connect(ui->actionAbout, &QAction::triggered, this, &Notepad::about);
     connect(ui->textEdit->document(), &QTextDocument::contentsChanged, this, &Notepad::documentWasModified);
 
@@ -241,6 +243,10 @@ void Notepad::insertTimeDate() {
   QTextCursor text_cursor = ui->textEdit->textCursor();
   text_cursor.movePosition(QTextCursor::End);
   ui->textEdit->setTextCursor(text_cursor);
+}
+
+void Notepad::openGitHub() {
+  QDesktopServices::openUrl(QUrl("https://github.com/zurg3/notepad"));
 }
 
 void Notepad::about() {
