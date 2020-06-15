@@ -19,7 +19,6 @@
 #include <QStatusBar>
 #include <QTextDocument>
 #include <QDateTime>
-#include <QTextCursor>
 #include <QDesktopServices>
 
 #include "notepad.h"
@@ -238,11 +237,8 @@ void Notepad::zoomIn() {
 void Notepad::insertTimeDate() {
   QDateTime current_time_date = QDateTime::currentDateTime();
   QString current_time_date_string = current_time_date.toString("hh:mm:ss dd.MM.yyyy");
-  ui->textEdit->setText(QString(ui->textEdit->toPlainText().toUtf8()) + current_time_date_string);
 
-  QTextCursor text_cursor = ui->textEdit->textCursor();
-  text_cursor.movePosition(QTextCursor::End);
-  ui->textEdit->setTextCursor(text_cursor);
+  ui->textEdit->insertPlainText(current_time_date_string);
 }
 
 void Notepad::openGitHub() {
