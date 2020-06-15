@@ -1,6 +1,6 @@
 # Maintainer: zurg3 <zurg3mail@mail.ru>
 pkgname=notepad
-pkgver=0.4
+pkgver=0.5
 pkgrel=1
 pkgdesc="Simple text editor. Based on official Qt5 Notepad example."
 arch=('x86_64')

@@ -1,3 +1,14 @@
+v0.5 (15.06.2020)
+- Added feature to insert current time and date in text
+- Added feature to open Notepad GitHub repository
+- Added '*' to window title if file is modified
+- Changed window title text for opened and saved file
+- Added status bar tips and messages
+- Updated some actions icons
+- Updated Qt version to 5.14.2 for Windows build
+- Removed qmake project file
+- Some minor improvements
+
 v0.4 (08.04.2020)
 - Added feature to open file from command line argument
 - Added Desktop Entry for Linux
