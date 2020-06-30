@@ -12,8 +12,11 @@ on:
 
 jobs:
   linux:
-    name: Linux (ubuntu-latest)
-    runs-on: ubuntu-latest
+    name: Linux (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04]
     steps:
       - name: Git Clone
         uses: actions/checkout@v2
