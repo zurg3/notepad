@@ -1,9 +1,9 @@
 # Build instructions for Windows
 ## Requirements
 - 64-bit Windows (Minimum: 7 / Recommended: 10)
-- Qt5 (Minimum: 5.10 / Recommended: 5.14)
+- Qt5 (Minimum: 5.10 / Recommended: 5.15)
 - Microsoft Visual Studio (Minimum: 2015)
-- CMake (Minimum: 3.10)
+- CMake (Minimum: 3.16)
 
 ## Get the source code
 ### Via Git Clone
