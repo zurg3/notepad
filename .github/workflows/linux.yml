@@ -3,7 +3,7 @@ env:
   APP_NAME: "notepad"
   APP_PLATFORM: "linux"
   APP_ARCH: "x86_64"
-  QT_VERSION: "5.14.2"
+  QT_VERSION: "5.15.1"
 
 on:
   push:
