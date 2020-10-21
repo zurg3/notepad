@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(notepad VERSION 0.5.1)
+project(notepad
+  VERSION 0.5.1
+  DESCRIPTION "Simple text editor. Based on official Qt5 Notepad example."
+  HOMEPAGE_URL "https://github.com/zurg3/notepad"
+  LANGUAGES CXX
+)
 
 if (UNIX AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 8.1)
   set(CMAKE_CXX_STANDARD 17)
