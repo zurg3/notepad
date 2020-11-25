@@ -3,7 +3,7 @@ env:
   APP_NAME: "notepad"
   APP_PLATFORM: "win32"
   APP_ARCH: "x64"
-  QT_VERSION: "5.15.1"
+  QT_VERSION: "5.15.2"
 
 on:
   push:
