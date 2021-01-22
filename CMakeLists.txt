@@ -9,11 +9,10 @@ project(notepad
 
 if (UNIX AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 8.1)
   set(CMAKE_CXX_STANDARD 17)
-  set(CMAKE_CXX_STANDARD_REQUIRED True)
 else ()
   set(CMAKE_CXX_STANDARD 20)
-  set(CMAKE_CXX_STANDARD_REQUIRED True)
 endif ()
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -34,7 +33,7 @@ if (UNIX)
     src/config.h
     src/version.h
   )
-endif (UNIX)
+endif ()
 
 if (WIN32)
   add_executable(notepad WIN32
@@ -47,7 +46,7 @@ if (WIN32)
     src/config.h
     src/version.h
   )
-endif (WIN32)
+endif ()
 
 target_link_libraries(notepad PUBLIC
   Qt5::Core
@@ -60,4 +59,4 @@ install(TARGETS notepad RUNTIME DESTINATION /usr/bin)
 
 if (UNIX)
   install(FILES notepad.desktop DESTINATION /usr/share/applications)
-endif (UNIX)
+endif ()
