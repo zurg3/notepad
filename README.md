@@ -1,6 +1,6 @@
 # Notepad
 
-Simple text editor. Based on [official Qt5 Notepad example](https://code.qt.io/cgit/qt/qtbase.git/tree/examples/widgets/tutorials/notepad?h=5.14).
+Simple text editor. Based on [official Qt6 Notepad example](https://code.qt.io/cgit/qt/qtbase.git/tree/examples/widgets/tutorials/notepad?h=6.1).
 
 [![Build Status](https://github.com/zurg3/notepad/workflows/Windows/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
 [![Build Status](https://github.com/zurg3/notepad/workflows/Linux/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
@@ -26,7 +26,7 @@ $ rm -rf notepad
 
 ## Some notes
 - **Currently I don't provide Notepad binaries for Linux!**
-- You need install the latest [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003) to run Notepad on Windows.
+- You need install the latest [Microsoft Visual C++ Redistributable](https://support.microsoft.com/help/2977003) to run Notepad on Windows.
 - [Issues](https://github.com/zurg3/notepad/issues) and [Pull Requests](https://github.com/zurg3/notepad/pulls) are welcome.
 
 ## Screenshots

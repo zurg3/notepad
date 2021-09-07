@@ -3,7 +3,7 @@ env:
   APP_NAME: "notepad"
   APP_PLATFORM: "win32"
   APP_ARCH: "x64"
-  QT_VERSION: "5.15.2"
+  QT_VERSION: "6.1.3"
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
       - name: Git Clone
         uses: actions/checkout@v2
 
-      - name: Setup Qt5
+      - name: Setup Qt6
         uses: jurplel/install-qt-action@v2
         with:
           version: ${{ env.QT_VERSION }}

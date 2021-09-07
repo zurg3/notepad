@@ -2,11 +2,11 @@
 pkgname=notepad
 pkgver=0.5.1
 pkgrel=1
-pkgdesc="Simple text editor. Based on official Qt5 Notepad example."
+pkgdesc="Simple text editor. Based on official Qt6 Notepad example."
 arch=('x86_64')
 url="https://github.com/zurg3/notepad"
 license=('GPLv3')
-depends=('qt5-base' 'qt5-tools')
+depends=('qt6-base' 'qt6-tools')
 makedepends=('git' 'cmake')
 source=("https://github.com/zurg3/notepad/archive/v$pkgver.tar.gz")
 md5sums=('SKIP')
