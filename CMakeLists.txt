@@ -19,7 +19,7 @@ find_package(Qt5 COMPONENTS Gui)
 find_package(Qt5 COMPONENTS Widgets)
 find_package(Qt5 COMPONENTS PrintSupport)
 
-if (UNIX)
+if(UNIX)
   add_executable(notepad
     src/main.cpp
     src/notepad.cpp
@@ -29,9 +29,9 @@ if (UNIX)
     src/config.h
     src/version.h
   )
-endif ()
+endif()
 
-if (WIN32)
+if(WIN32)
   add_executable(notepad WIN32
     src/main.cpp
     src/notepad.cpp
@@ -42,7 +42,7 @@ if (WIN32)
     src/config.h
     src/version.h
   )
-endif ()
+endif()
 
 target_link_libraries(notepad PUBLIC
   Qt5::Core
@@ -53,6 +53,6 @@ target_link_libraries(notepad PUBLIC
 
 install(TARGETS notepad RUNTIME DESTINATION /usr/bin)
 
-if (UNIX)
+if(UNIX)
   install(FILES notepad.desktop DESTINATION /usr/share/applications)
-endif ()
+endif()
