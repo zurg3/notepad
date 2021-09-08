@@ -25,7 +25,6 @@ jobs:
           host: "windows"
           target: "desktop"
           install-deps: "true"
-          mirror: "http://mirrors.ocf.berkeley.edu/qt/"
           cached: "false"
 
       - name: Setup MSBuild

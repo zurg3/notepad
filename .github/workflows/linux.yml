@@ -29,7 +29,6 @@ jobs:
           host: "linux"
           target: "desktop"
           install-deps: "true"
-          mirror: "http://mirrors.ocf.berkeley.edu/qt/"
           cached: "false"
 
       - name: Build
