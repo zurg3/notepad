@@ -3,7 +3,7 @@ env:
   APP_NAME: "notepad"
   APP_PLATFORM: "win32"
   APP_ARCH: "x64"
-  QT_VERSION: "6.2.0"
+  QT_VERSION: "6.2.3"
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Git Clone
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Qt6
         uses: jurplel/install-qt-action@v2
@@ -39,7 +39,7 @@ jobs:
           windeployqt --no-translations Release
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ env.APP_NAME }}-${{ env.APP_PLATFORM }}-${{ env.APP_ARCH }}
           path: build\Release

@@ -3,7 +3,7 @@ env:
   APP_NAME: "notepad"
   APP_PLATFORM: "linux"
   APP_ARCH: "x86_64"
-  QT_VERSION: "6.2.0"
+  QT_VERSION: "6.2.3"
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
       fail-fast: false
     steps:
       - name: Git Clone
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Qt6
         uses: jurplel/install-qt-action@v2
