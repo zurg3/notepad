@@ -1,6 +1,6 @@
 # Notepad
 
-Simple text editor. Based on [official Qt6 Notepad example](https://code.qt.io/cgit/qt/qtbase.git/tree/examples/widgets/tutorials/notepad?h=6.2).
+Simple text editor. Based on [official Qt6 Notepad example](https://code.qt.io/cgit/qt/qtbase.git/tree/examples/widgets/tutorials/notepad?h=6.3).
 
 [![Build Status](https://github.com/zurg3/notepad/workflows/Windows/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
 [![Build Status](https://github.com/zurg3/notepad/workflows/Linux/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
