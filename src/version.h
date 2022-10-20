@@ -7,6 +7,6 @@ constexpr auto app_version_major = 0;
 constexpr auto app_version_minor = 5;
 constexpr auto app_version_patch = 1;
 
-constexpr auto app_build = 76;
+constexpr auto app_build = 77;
 
 const QString app_full_version = app_version + QString(" (") + QString::number(app_build) + QString(")") + QString(" ") + QSysInfo::buildCpuArchitecture();
