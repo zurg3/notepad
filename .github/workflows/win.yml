@@ -28,7 +28,7 @@ jobs:
           cache: "false"
 
       - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
+        uses: microsoft/setup-msbuild@v2
 
       - name: Build
         run: |
