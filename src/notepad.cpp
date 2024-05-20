@@ -250,7 +250,7 @@ void Notepad::about() {
                         + QString("<span style='color: #707070;'>version ")
                         + app_full_version
                         + QString("</span>")
-                        + QString("<br><br><br>Simple text editor. Based on <a href='https://code.qt.io/cgit/qt/qtbase.git/tree/examples/widgets/tutorials/notepad?h=6.5'>official Qt6 Notepad example</a>.")
+                        + QString("<br><br><br>Simple text editor. Based on <a href='https://code.qt.io/cgit/qt/qtbase.git/tree/examples/widgets/tutorials/notepad?h=6.7'>official Qt6 Notepad example</a>.")
                         + QString("<br><br>This software is licensed under <a href='https://www.gnu.org/licenses/gpl-3.0.html'>GNU GPL v3</a>.")
                         + QString("<br><br>Source code is available on <a href='https://github.com/zurg3/notepad'>GitHub</a>.")
                         + QString("<br><br><br>Qt version: ")
