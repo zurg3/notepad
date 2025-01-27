@@ -2,8 +2,8 @@
 
 Simple text editor. Based on [official Qt6 Notepad example](https://code.qt.io/cgit/qt/qtbase.git/tree/examples/widgets/tutorials/notepad?h=6.7).
 
-[![Build Status](https://github.com/zurg3/notepad/workflows/Windows/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
-[![Build Status](https://github.com/zurg3/notepad/workflows/Linux/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
+[![Build Status](https://github.com/zurg3/notepad/actions/workflows/win.yml/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
+[![Build Status](https://github.com/zurg3/notepad/actions/workflows/linux.yml/badge.svg?branch=master&event=push)](https://github.com/zurg3/notepad/actions)
 
 ## Install Notepad
 ### Windows - [download portable build](https://github.com/zurg3/notepad/releases/latest)
