@@ -26,7 +26,7 @@ $ rm -rf notepad
 
 ## Some notes
 - **Currently I don't provide Notepad binaries for Linux!**
-- You need install the latest [Microsoft Visual C++ Redistributable](https://support.microsoft.com/help/2977003) to run Notepad on Windows.
+- You need install the latest [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist) to run Notepad on Windows.
 - [Issues](https://github.com/zurg3/notepad/issues) and [Pull Requests](https://github.com/zurg3/notepad/pulls) are welcome.
 
 ## Screenshots
