@@ -1,7 +1,7 @@
 # Build instructions for Windows
 ## Requirements
 - 64-bit Windows (Minimum: 10 / Recommended: 11)
-- Qt6 (Minimum: 6.7 / Recommended: 6.7)
+- Qt6 (Minimum: 6.10 / Recommended: 6.10)
 - Microsoft Visual Studio (Minimum: 2022)
 - CMake (Minimum: 3.20)
 

@@ -1,8 +1,8 @@
 # Build instructions for Linux
 ## Requirements
 - 64-bit GNU/Linux distro
-- Qt6 (Minimum: 6.7 / Recommended: 6.7)
-- GCC (Minimum: 12 / Recommended: 14)
+- Qt6 (Minimum: 6.10 / Recommended: 6.10)
+- GCC (Minimum: 12 / Recommended: 15)
 - CMake (Minimum: 3.20)
 
 ## Get the source code
