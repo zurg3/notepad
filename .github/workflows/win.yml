@@ -39,7 +39,7 @@ jobs:
           windeployqt --no-translations Release
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ env.APP_NAME }}-${{ env.APP_PLATFORM }}-${{ env.APP_ARCH }}
           path: build\Release
